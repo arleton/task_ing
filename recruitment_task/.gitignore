@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Pytest
+.pytest_cache/
+.cache/
+
+# Allure results & reports
+allure-results/
+allure-report/
+
+# Playwright cache (browsers, etc.)
+playwright/.cache/
+playwright/.pytest_cache/
+test-results/
+
+# VS Code
+.vscode/
