@@ -9,7 +9,7 @@ class HomePage:
         self.page.set_default_timeout(5000)
         self.logo = self.page.locator("img.header__logoSource--desktop[alt='ING Polska logo']")
         self.cookie_banner = self.page.locator("div.cookie-policy-content[role='dialog']").first
-        self.customize_button = self.page.locator("button.js-cookie-policy-main-settings-button")
+        self.customize_button = self.page.get_by_role("button", name="Dostosuj")
         self.toggle_slider = self.page.get_by_role("switch", name="Cookies analityczne")
         self.accept_selected_button = self.page.get_by_role("button", name="Zaakceptuj zaznaczone")
 
@@ -34,11 +34,11 @@ class HomePage:
     def click_toggle_slider(self) -> None:
         self.toggle_slider.click()
 
-    @allure.step("Klikam przycisk 'Zaakceptuj zaznaczone'")
+    @allure.step("Kliknięcie w przycisk 'Zaakceptuj zaznaczone'")
     def click_accept_selected(self) -> None:
         self.accept_selected_button.click()    
 
-    @allure.step("Sprawdzam, czy zapisano ciasteczka analityczne (np. _ga, _ga_*)")
+    @allure.step("Sprawdzenie, czy zapisano ciasteczka analityczne")
     def has_analytics_cookies(self) -> bool:
         for _ in range(10):
             cookies = self.page.context.cookies()

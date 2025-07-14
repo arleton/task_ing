@@ -25,6 +25,7 @@ WARIAN 2 (Z allure)
 Uruchomienie z poziomu folderu recruitment_task za pomocą komendy .\run_tests_allure.bat. Po uruchomieniu testów automatycznie zostanie zainicjowna strona z wygenerowanym raportem w Allure.
 
 ![alt text](photo/image-1.png)
+![alt text](photo/image-4.png)
 
 WARIANT 3 - Dla właściciela repozytorium
 
